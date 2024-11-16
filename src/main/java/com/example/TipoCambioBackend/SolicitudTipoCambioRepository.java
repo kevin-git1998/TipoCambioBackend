@@ -5,8 +5,11 @@ import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import java.time.LocalDateTime;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 @Entity
+public interface SolicitudTipoCambioRepository extends JpaRepository<SolicitudTipoCambio, Long> {
+}
 public class SolicitudTipoCambio {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
